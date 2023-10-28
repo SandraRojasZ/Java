@@ -15,14 +15,38 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
+//@Getter
+//@Setter
+//@Builder
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Entity(name = "nota")
 public class NotaModel {
 	
+	public Long getIdNota() {
+		return idNota;
+	}
+
+	public void setIdNota(Long idNota) {
+		this.idNota = idNota;
+	}
+
+	public String getMateria() {
+		return materia;
+	}
+
+	public void setMateria(String materia) {
+		this.materia = materia;
+	}
+
+	public int getNota() {
+		return nota;
+	}
+
+	public void setNota(int nota) {
+		this.nota = nota;
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idNota;
@@ -35,24 +59,6 @@ public class NotaModel {
     @NotNull(message = "Nota não pode estar vazia.")
 	private int nota;
 
-	public Long getIdNota() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public Object getMateria() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void setMateria(Object materia2) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setNota(Long idNota2) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }
